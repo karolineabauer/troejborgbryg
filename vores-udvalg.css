@@ -1,0 +1,640 @@
+/* css reset */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body{
+  padding: 0px;
+  margin: 0px;
+  font-size: 20px;
+  min-height: 100vh; /*Indsat for at tjekke om siden scroller*/
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
+}
+
+main{
+  min-height: 200vh; /*Indsat for at tjekke om siden scroller*/
+}
+
+/************************* styling af navbar ************************/
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .35s, visibility .35s, height .35s;
+  overflow: hidden;
+  background-color: #EBEBE9;
+  z-index: 1; 
+}
+
+/* Styling af logo */
+.logo-container{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  margin-left: 1%;
+  top: 1%;
+  z-index: 1001;
+}
+
+/* styling af logo */
+img{
+  width: 5%;
+}
+
+/* Styling af mainnav */
+header{
+background-color: #EBEBE9;
+display: flex;
+align-items: center;  
+position: sticky; /*Gør navigationsbaren følger siden*/
+top: 0px;
+width: 100%;
+z-index: 1000;
+}
+
+#main-menu {
+  display: flex;
+  height: 130px; /*Højden af navigationsbare*/
+  width: 100%;
+  margin: 0px;  
+  z-index: 9;
+  transition: top 0.3s;
+}
+
+#main-menu ul {
+  width: 100%;
+  height: 100%;
+  margin: 0px auto;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  z-index: 9;
+}
+
+#main-menu li {
+  list-style-type: none;
+  font-size: 2rem;
+}
+
+#main-menu a {
+  color:#051660; 
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+#main-menu a:hover {
+  color: #5160a2;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#hamburger-input{
+  display: none;
+}
+
+/* Styling af navbar */
+#hamburger-menu {
+  position: fixed;
+  top: 5%;
+  right: 20px;
+  width: 40px; /*burgermenu ikon størelse*/
+  height: 40px; /*burgermenu ikon størelse*/
+  display: none;
+  background-color: #EBEBE9;
+  border: none;
+  padding: 0;
+  z-index: 1001;
+  margin: 0;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background: linear-gradient(
+  to bottom, 
+  #051660, #051660 20%, 
+  rgba(255, 255, 255, 0) 20%,rgba(255, 255, 255, 0) 40%, /*gennemsigtig farve*/
+  #051660 40%,#051660 60%, 
+  rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 80%, 
+#051660 80%, #051660 100%
+  );
+}
+
+/* styling af sidebar */
+#hamburger-menu #sidebar-menu {
+  position: fixed;
+  top: 0;
+  right: -100%; 
+  width: 40%; 
+  height: 100%;
+  background-color: #EBEBE9; 
+  transition: 0.7s right; 
+  padding: 0px 10px;
+  box-sizing: border-box;
+  overflow-y: auto; 
+}
+
+
+/* hamburgermenu */
+#hamburger-menu ul {
+  padding-left: 0px;
+}
+
+
+#hamburger-menu li {
+  line-height: 7rem;
+  color: #051660; 
+  margin-top: 15%;
+}
+
+#hamburger-menu a {
+  color: #051660; 
+  font-size: 1rem;
+  text-decoration: none;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* hovereffekt */
+#hamburger-menu a:hover {
+  text-decoration: underline;
+}
+
+#hamburger-input:checked + #hamburger-menu #sidebar-menu {
+  right: 0;
+}
+
+/* Gør den resterende skærm har et gennemsigtigt lag over */
+#hamburger-input:checked ~ .overlay{
+  visibility: visible;
+  opacity: 0.4;
+}
+
+/* kryds i slidemenu */
+#close-menu {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  color: #051660;
+  cursor: pointer;
+}
+
+
+/********************************** styling af main *****************************************/
+
+/* dåser på hylden */
+.daese-pae-hylde {
+  width: 100%;
+  height: 100%;
+}
+
+.banner1 {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ position: relative;
+}
+
+/* tekst i banner */
+.banner1 h1{
+  position: absolute;
+  align-items: center;
+  text-align: center;
+  margin-left: 30%;
+  margin-right: 30%;
+  top: 70%;
+  color: white;
+  font-weight:400;
+  font-size:5rem;
+  line-height: 6rem;
+  color: #5f5f5f;
+}
+
+.banner1 a {
+  position: absolute;
+  margin-top:15%;
+  font-size: 5rem;
+  font-weight: 400;
+  color: #5f5f5f;
+}
+
+/* hovereffekt */
+.banner1 a:hover {
+  color: #051660;
+}
+
+
+/******* banner 2 ********/
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* tekst i banner */
+.text {
+  text-align: justify;
+  
+}
+
+.text h3 {
+  color: #051660;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* img i banner */
+.image {
+  width: 40%;
+}
+
+/************ styling af tekst felt ************/
+
+.text, .text1 {
+  margin-left: 2%;
+  color: #051660;
+  margin-top: 10%;
+}
+
+h4 {
+  font-size: 2rem;
+  margin-bottom: 3%;
+}
+
+.text a{
+  color: #051660;
+  line-height: 1.8rem;
+}
+
+/* hovereffekt */
+.text a:hover{
+  color: #5160a2;
+}
+
+/************* styling af øl udvalg  *************/
+
+
+#alle {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px; 
+}
+
+/* img i varianter */
+.beer-image {
+  position: relative;
+  text-align: left;
+  margin: 10px;
+  width: 48%; 
+  margin-top: 5%;
+}
+
+
+.beer-image img {
+  width: 70%;
+  display: block;
+  margin: 0 auto;
+}
+
+/* tekst under billede */
+.beer-image p {
+  position: relative;
+  bottom: 0;
+  margin-left: 15%;
+  width: 100%;
+  padding: 10px;
+  background-color: white; /* Set your desired background color for the caption */
+  color: #051660; 
+  font-size: 1rem;
+  font-weight: 100;/* Set your desired text color for the caption */
+  margin-bottom: -5%;
+}
+
+/********************************** Styling af footer ************************************/
+.footer {
+  background-color: #EBEBE9;
+  padding: 60px;
+  text-align: center;
+  color: #4b4c4d;
+  box-sizing: border-box;
+  margin-top: 5%;
+}
+
+.social {
+  margin-bottom: 20px;
+}
+
+.social a {
+  font-size: 1.5rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #051660;
+  border: 1px solid #ccc;
+  width: 40px;
+  height: 40px;
+  line-height: 38px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  margin: 0 8px;
+  opacity: 0.75;
+  transition: color 0.3s, opacity 0.3s;
+}
+
+.social a:hover {
+  color: #5160a2;
+  opacity: 0.9;
+}
+
+.footer ul {
+  list-style: none;
+  font-size: 18px;
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+}
+
+.footer ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.footer ul li:last-child {
+  margin-right: 0;
+}
+
+.footer ul li a {
+  color: #051660;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: color 0.3s, opacity 0.3s;
+}
+
+.footer ul li a:hover {
+  opacity: 1;
+  color: #5160a2;
+}
+
+/******************************* breakpoints *****************************/
+
+/* iphone */
+@media screen and (max-width: 480px) {
+
+  /* header + burgerbar */
+  header {
+    height: 100px;
+    width: 110%;
+    position:sticky;
+  }
+
+
+  .logo-container img {
+    width: 5rem;
+    margin-top: -1%;
+    margin-left: 200%;
+  }
+
+  .logo-container{
+    position: fixed;
+  }
+  
+  #main-menu {
+    height: auto;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #main-menu {
+    display: none;
+  }
+  
+  #hamburger-menu {
+    display: inline;
+  }
+
+  #hamburger-menu {
+    width: 5%;
+    height: 3%;
+    margin-right: 5%;
+  }
+  
+  /* dåser med banner */
+  .daese-pae-hylde {
+    width: 120%;
+  }
+
+  .banner1 h1 {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    margin-left: 25%;
+    margin-top: -30%;
+    
+  }
+
+  .banner1 a {
+    font-size: 1rem;
+    margin-top: 40%;
+  }
+  
+  /* banner 2 */
+
+  .container {
+    margin-top: -30%;
+    margin-left: 2%;
+  }
+  
+  .text h3 {
+   font-size: 0.8rem;
+  }
+  
+  .image {
+    width: 55%;
+    margin-right: 5%;
+    margin-top: 10%;
+  }
+  
+  /* udvalg */
+
+.text1 {
+font-size: 1.2rem;
+margin-top: -20%;
+margin-left: 9%;
+}
+
+.beer-image {
+  width: 74%;
+  margin-left: 12%;
+}
+
+.beer-image p {
+ font-size: 0.8rem;
+}
+
+  /* footer */
+  .footer {
+    width: 110%;
+    padding: 4%;
+  }
+
+  .footer ul {
+    font-size: 0.9rem;
+  }
+}
+
+/* tablet */
+@media screen and (min-width: 481px) and (max-width: 915px) {
+
+  /* header + burgerbar */
+  header {
+    height: 125px;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: 44%;
+    }
+
+  .logo-container img {
+    width: 100px;
+  }
+
+  #main-menu {
+    height: 100px;
+    gap: 20px;
+  }
+
+  #main-menu {
+    display: none;
+  }
+  
+  #hamburger-menu {
+    display: inline;
+  }
+
+   /* banner 1 */
+
+   .daese-pae-hylde {
+    width: 100%;
+  }
+
+  .banner1 h1 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+    margin-top: -10%;
+  }
+
+  .banner1 a {
+    font-size: 2.5rem;
+    margin-top: 30%;
+  }
+
+  /* VORES ØL */
+  .container {
+    margin-top: -10%;
+    margin-left: 3%;
+  }
+  
+  .text h3 {
+   font-size: 2rem;
+  }
+  
+  .image {
+    width: 50%;
+    margin-right: 5%;
+  }
+  
+  /* varianter */
+
+  .text1 {
+    font-size: 1.7rem;
+    margin-top: -10%;
+    margin-left: 9%;
+    margin-right: 9%;
+    }
+    
+  /* footer */
+  .footer {
+    padding: 3%;
+  }
+
+}
+
+/* store skærme og laptop */
+@media only screen and (min-width: 916px) {
+  /* header + burgermenu */
+  header {
+    height: 125px;
+  }
+
+  .logo-container img {
+    width: 100px;
+  }
+
+  .logo-container{
+    position: fixed;
+  }
+  
+  header {
+    height: 120px;
+  }
+
+  #main-menu {
+    height: 130px;
+    gap: 30px;
+  }
+
+  /* banner 1 */
+  .daese-pae-hylde {
+    width: 100%;
+  }
+
+  .banner1 h1 {
+    font-size: 2rem;
+    line-height: 4rem;
+    margin-top: -10%;
+  }
+
+  .banner1 a {
+    font-size: 2.5rem;
+    margin-top: 35%;
+  }
+
+
+  /* VORES ØL */
+  .container {
+    margin-top: 0;
+    margin-left: 6%;
+  }
+  
+  .text h3 {
+   font-size: 2rem;
+  }
+  
+  .image {
+    width: 55%;
+    margin-right: 5%;
+  }
+
+  /* varianter */
+
+  .text1 {
+    font-size: 1.7rem;
+    margin-top: 0%;
+    margin-left: 9%;
+    margin-right: 9%;
+    }
+  }
+
+ 
+
+
+
+
