@@ -255,7 +255,7 @@ h3 {
     justify-content: space-between;
     align-items: center;
     gap: 10rem;
-    background-color: #051660;
+    background-color: #14246c;
     color: white;
     padding: 4%;
     margin-top: 15%;
@@ -424,11 +424,14 @@ h4 {
         align-items: center;
         gap: 3rem;
         padding: 2.1rem;
-        font-size: 0.8rem;
+        font-size: 0.6rem;
         width: 110%;
         height: 150%;
     }
     
+    .Kontakt h4 {
+      line-height: 1rem;
+    }
     h4 {
         line-height: 3rem;
         font-size: 0.7rem;

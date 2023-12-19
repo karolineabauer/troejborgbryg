@@ -607,7 +607,7 @@ p {
   
 }
 
-/* Large screens (992px and above) */
+/* laptop */
 @media only screen and (min-width: 916px) {
   header {
     height: 125px;
