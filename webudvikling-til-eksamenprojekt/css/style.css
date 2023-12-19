@@ -1,0 +1,647 @@
+/* css reset */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body{
+  padding: 0px;
+  margin: 0px;
+  font-size: 20px;
+  min-height: 100vh; /*Indsat for at tjekke om siden scroller*/
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
+}
+
+main{
+  min-height: 200vh; /*Indsat for at tjekke om siden scroller*/
+}
+
+/************************* styling af navbar ************************/
+.overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .35s, visibility .35s, height .35s;
+  overflow: hidden;
+  background-color: #EBEBE9;
+  z-index: -1;
+}
+
+/* Styling af logo */
+.logo-container{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  margin-left: 1%;
+  top: 1%;
+  z-index: 1001;
+}
+
+/* styling af logo */
+img{
+  width: 5%;
+}
+
+/* Styling af mainnav */
+header{
+background-color: #EBEBE9;
+display: flex;
+align-items: center;  
+position: sticky; /*Gør navigationsbaren følger siden*/
+top: 0px;
+width: 100%;
+z-index: 1000;
+}
+
+#main-menu {
+  display: flex;
+  height: 130px; /*Højden af navigationsbare*/
+  width: 100%;
+  margin: 0px;  
+  z-index: 9;
+  transition: top 0.3s;
+}
+
+#main-menu ul {
+  width: 100%;
+  height: 100%;
+  margin: 0px auto;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  z-index: 9;
+}
+#main-menu li {
+  list-style-type: none;
+  font-size: 2rem;
+}
+
+#main-menu a {
+  color:#051660; 
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+#main-menu a:hover {
+  color: #5160a2;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#hamburger-input{
+  display: none;
+}
+
+/* Styling af navbar */
+#hamburger-menu {
+  position: fixed;
+  top: 5%;
+  right: 20px;
+  width: 40px; /*burgermenu ikon størelse*/
+  height: 40px; /*burgermenu ikon størelse*/
+  display: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background: linear-gradient(
+  to bottom, 
+  #051660, #051660 20%, 
+  rgba(255, 255, 255, 0) 20%,rgba(255, 255, 255, 0) 40%, /*gennemsigtig farve*/
+  #051660 40%,#051660 60%, 
+  rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 80%, 
+#051660 80%, #051660 100%
+  );
+}
+
+/* styling af sidebar */
+#hamburger-menu #sidebar-menu {
+  position: fixed;
+  top: 0;
+  right: -100%; 
+  width: 40%; 
+  height: 100%;
+  background-color: #EBEBE9; 
+  transition: 0.7s right; 
+  padding: 0px 10px;
+  box-sizing: border-box;
+  overflow-y: auto; 
+}
+
+
+/* hamburgermenu */
+#hamburger-menu ul {
+  padding-left: 0px;
+}
+
+
+#hamburger-menu li {
+  line-height: 7rem;
+  color: #051660; 
+  margin-top: 15%;
+}
+
+#hamburger-menu a {
+  color: #051660; 
+  font-size: 1rem;
+  text-decoration: none;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* hovereffekt */
+#hamburger-menu a:hover {
+  text-decoration: underline;
+}
+
+#hamburger-input:checked + #hamburger-menu #sidebar-menu {
+  right: 0;
+}
+
+/* Gør den resterende skærm har et gennemsigtigt lag over */
+#hamburger-input:checked ~ .overlay{
+  visibility: visible;
+  opacity: 0.4;
+}
+
+
+/* kryds i slidemenu */
+#close-menu {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  color: #051660;
+  cursor: pointer;
+}
+
+/******************************************** MAIN *******************************************************/
+main{
+  min-height: 200vh; /*Indsat for at tjekke om siden scroller*/
+  margin-top: 5%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 50;
+}
+
+h1, h2, h3, h4 {
+  text-align: center;
+  color: #051660;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 1.7rem;
+  font-weight: 500;
+  margin-bottom: 5%;
+}
+
+.section-forside {
+  background-color: #EBEBE9;
+  padding: 6%;
+  text-align: center;
+  margin-top: 5%;
+  width: 100%;
+}
+
+.produkter {
+  width: 60%;
+  margin-top: 5%;
+}
+
+.produkter2 {
+  display: none;
+  width: 10%;
+  margin-top: 5%;
+  margin-left: 10%;
+}
+
+.section-forside a{
+  color: #051660;
+  background-color: white;
+  padding: 2%;
+  margin-top: 10rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+
+.section-forside a:hover {
+  background-color: #5160a2;
+  color: white;
+}
+
+
+/**** nyhedsbrev *****/
+
+/* styling af overskrift */
+h4 {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-top: 5%;
+}
+
+/* styling af paragraf */
+.p {
+  font-weight: 50;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #333c62;
+}
+
+/* centere btn */
+.nyhedsbrev {
+  text-align: center;
+}
+
+/* styling af btn */
+.btn2 {
+  background-color: #051660;
+  font-size: 1rem;
+  width: 30%;
+  color: white;
+  padding: 1%;
+}
+
+.btn3 {
+background-color: #051660;
+  font-size: 1rem;
+  width: 20%;
+  color: white;
+  padding: 1%;
+}
+
+/* styling af hover */
+.btn2:hover, .btn3:hover {
+  background-color: #EBEBE9;
+  cursor: pointer;
+  color: #051660;
+}
+
+/***** Signatur øl ******/
+
+.signaturoel {
+  margin-top: 10%;
+  margin-bottom: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-container {
+  width: 60%; 
+}
+
+h5 {
+  font-size: 2.5rem;
+  color: #051660;
+}
+
+p {
+  color: #333c62;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.text-container a{
+  text-decoration: none;
+  color: #051660;
+  background-color: #EBEBE9;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 3%;
+  max-width: 100%;
+  margin-top: 3%;
+}
+
+.text-container a:hover {
+  color:#5160a2;
+}
+
+
+.label-grafic {
+  width: 40%; 
+  margin-left: 10%;
+
+}
+
+
+/********************************** Styling af footer ************************************/
+.footer {
+  background-color: #EBEBE9;
+  padding: 60px;
+  text-align: center;
+  color: #4b4c4d;
+  box-sizing: border-box;
+}
+
+.social {
+  margin-bottom: 20px;
+}
+
+.social a {
+  font-size: 1.5rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #051660;
+  border: 1px solid #ccc;
+  width: 40px;
+  height: 40px;
+  line-height: 38px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  margin: 0 4px;
+  opacity: 0.75;
+  transition: color 0.3s, opacity 0.3s;
+}
+
+.social a:hover {
+  color: #5160a2;
+  opacity: 0.9;
+}
+
+.footer ul {
+  list-style: none;
+  font-size: 18px;
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+}
+
+.footer ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.footer ul li:last-child {
+  margin-right: 0;
+}
+
+.footer ul li a {
+  color: #051660;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: color 0.3s, opacity 0.3s;
+}
+
+.footer ul li a:hover {
+  opacity: 1;
+  color: #5160a2;
+}
+
+/*********************************** breakpoints **********************************/
+
+/* iphone */
+@media screen and (max-width: 480px) {
+/* header + burgermenu */
+  header {
+    height: 50px;
+    width: 110%;
+  }
+
+  main {
+    min-height: 130vh; 
+  }
+
+  .logo-container img {
+    width: 2rem;
+    margin-left: -20%;
+    padding: 10%;
+  }
+
+  #main-menu {
+    height: auto;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #main-menu {
+    display: none;
+  }
+  
+  #hamburger-menu {
+    display: inline;
+  }
+
+  #hamburger-menu {
+    width: 5%;
+    height: 3%;
+    margin-top: 4%;
+    margin-right: 4%;
+  }
+
+  /* tekst på siden */
+
+  h1 {
+    font-size: 2rem;
+    margin-top: 10%;
+    margin-left: 7%;
+  }
+
+  h2 {
+    font-size: 1rem;
+    margin-left: 7%;
+  }
+
+  h3 {
+    font-size: 0.8rem;
+    margin-left: 7%;
+  }
+
+  h4 {
+    font-size: 1.3rem;
+    margin-left: 5%;
+  }
+
+  p {
+    font-size: 1rem;
+    margin-left: 6%;
+  }
+
+  .text-container {
+    width: 80%;
+  }
+  
+  h5 {
+    font-size: 1rem;
+  }
+  
+  /* section med dåser */
+  .section-forside  {
+    width: 110%;
+    margin-top: 10%;
+  }
+
+ 
+
+  .produkter{
+    display: none;
+  }
+
+
+    .produkter2 {
+      display: block;
+    }
+
+
+  .section-forside a {
+    margin-left: 7%;
+    font-size: 1rem;
+  }
+
+
+/* nyhedsbrev */
+  .nyhedsbrev {
+    padding: 5%;
+    font-size: 1rem;
+    margin-left: 8%;
+  }
+
+  /* label grafic + tekst */
+
+  
+  .label-grafic {
+    width: 80%;
+    height: 80%;
+    margin-right: -8%;
+    margin-top: 10%;
+  }
+
+  .indhold{
+    margin-top: 5%;
+    margin-left: 5%;
+  }
+
+  .text-container a{
+    font-size: 0.7rem;
+  }
+
+  /* footer */
+  .footer {
+    margin-top: 0%;
+    width: 110%;
+    padding: 4%;
+  }
+
+  .footer ul {
+    font-size: 0.9rem;
+  }
+}
+
+/* tablet */
+@media screen and (max-width: 915px) {
+
+  header {
+    height: 125px;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: 44%;
+    }
+
+  .logo-container img {
+    width: 100px;
+  }
+
+  #main-menu {
+    height: 100px;
+    gap: 20px;
+  }
+
+  #main-menu {
+    display: none;
+  }
+  
+  #hamburger-menu {
+    display: inline;
+  }
+  .section-forside img{
+    width: 80%;
+  }
+  
+  .nyhedsbrev {
+    margin-top: 10%;
+  }
+
+
+  h5 {
+    font-size: 1.3rem;
+  }
+
+
+
+  .label-grafic {
+    width: 50%;
+    height: 50%;
+  }
+
+
+  .footer {
+    padding: 3%;
+  }
+
+  
+}
+
+/* Large screens (992px and above) */
+@media only screen and (min-width: 916px) {
+  header {
+    height: 125px;
+  }
+
+  .logo-container img {
+    width: 100px;
+  }
+
+  header {
+    height: 120px;
+  }
+
+
+  #main-menu {
+    height: 130px;
+    gap: 30px;
+  }
+
+  .section-forside img {
+    width: 80%;
+  }
+
+  h5 {
+    font-size: 2rem;
+  }
+
+  .label-grafic {
+    width: 50%;
+    height: 50%;
+  }
+  
+}
+
+
+
+
